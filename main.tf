@@ -7,11 +7,13 @@ provider "aws" {
   # secret_key = "" # should not be used but there is this option
 }
 
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs#provider-configuration
-resource "aws_instance" "my-first-server" {
-  ami           = "ami-0d75513e7706cf2d9"
-  instance_type = "t2.micro"
-  tags = {
-    Name = "ubuntu"
-  }
+#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl
+
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-example-bucket-456789876543"
+}
+
+resource "aws_s3_bucket_acl" "example_bucket_acl" {
+  bucket = aws_s3_bucket.example.id
+  acl    = "private"
 }

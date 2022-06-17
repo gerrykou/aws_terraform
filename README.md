@@ -1,6 +1,7 @@
 # AWS with Terraform   
 ## Branches
 * [ec2](https://github.com/gerrykou/aws_terraform/tree/ec2)
+* [s3](https://github.com/gerrykou/aws_terraform/tree/s3)  
 
 ## Resources
 https://www.youtube.com/watch?v=SLB_c_ayRMo   
