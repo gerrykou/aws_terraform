@@ -4,11 +4,15 @@
 * [s3](/s3)  
 
 ## Resources
-* Terraform Course - Automate your AWS cloud infrastructure   
+* Terraform Course - Automate your AWS cloud infrastructure  
 https://www.youtube.com/watch?v=SLB_c_ayRMo   
 
-* Terraform - Create Resources on AWS   
-https://www.youtube.com/watch?v=BZ2BP2l_lE4&list=PLg5SS_4L6LYu9g-CJ_SwepWE1lAH4xb4o&index=18
+* Terraform - Create Resources on AWS  
+https://www.youtube.com/watch?v=BZ2BP2l_lE4
+
+* How do I deploy AWS Lambda using Terraform?  
+https://www.youtube.com/watch?v=JSR7U700h0U   
+
 
 ## Commands
 ```shell
