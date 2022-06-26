@@ -1,4 +1,9 @@
+[Deploy Python Lambda functions with .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html)
 ```shell
-python3 -m pip install -r myapp/requirements.txt --target myapp/
-python3 -m zipapp myapp/
+cd my-sourcecode-function
+pip install --target ./package requests
+cd package
+zip -r ../my-deployment-package.zip .
+cd ..
+zip -g my-deployment-package.zip lambda_function.py
 ```

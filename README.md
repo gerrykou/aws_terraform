@@ -2,7 +2,8 @@
 ## Folders
 * [ec2](/01_ec2)
 * [s3](/02_s3)  
-* [lambda](/03_lambda)  
+* [03_lambda](/03_lambda) Python without dependencies  
+* [04_lambda](/04_lambda) Python with dependencies  
 
 ## Resources
 * Terraform Course - Automate your AWS cloud infrastructure  
@@ -31,8 +32,12 @@ https://aws-blog.com/2019/05/building-lambda-with-terraform.html
 terraform init
 terraform plan
 terraform apply
-terraform apply -auto-approve
 terraform destroy
+```
+or
+```shell
+terraform apply -auto-approve
+terraform destroy -auto-approve
 ```
 ## Export env variables - Linux
 ```shell

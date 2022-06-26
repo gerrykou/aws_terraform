@@ -57,20 +57,20 @@ resource "aws_iam_role_policy_attachment" "attach_iam_policy_to_iam_role" {
   policy_arn  = aws_iam_policy.iam_policy_for_lambda.arn
 }
 
-# Generates an archive from content, a file, or a directory of files.
-data "archive_file" "zip_the_python_code" {
- type        = "zip"
- source_dir  = "${path.module}/python/"
- output_path = "${path.module}/python/hello-python.zip"
-}
+# # Generates an archive from content, a file, or a directory of files.
+# data "archive_file" "zip_the_python_code" {
+#  type        = "zip"
+#  source_dir  = "${path.module}/python/"
+#  output_path = "${path.module}/python/hello-python.zip"
+# }
 
 # Create a lambda function
 # In terraform ${path.module} is the current directory.
 resource "aws_lambda_function" "terraform_lambda_func" {
- filename                       = "${path.module}/python/hello-python.zip"
+ filename                       = "${path.module}/my-sourcecode-function/my-deployment-package.zip"
  function_name                  = "My-Lambda-Function"
  role                           = aws_iam_role.lambda_iam_role.arn
- handler                        = "hello-python.lambda_handler"
+ handler                        = "lambda_function.lambda_handler"
  runtime                        = "python3.8"
  depends_on                     = [aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role]
 }
